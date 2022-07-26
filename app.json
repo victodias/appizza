@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "appizza",
+    "slug": "appizza",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "appizza"
+}
