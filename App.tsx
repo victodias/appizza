@@ -1,5 +1,5 @@
 import { Text, View } from 'react-native'
-import AppLoading from 'expo-app-loading'
+import Loading from 'expo-app-loading'
 import { useFonts, DMSans_400Regular } from '@expo-google-fonts/dm-sans'
 import { DMSerifDisplay_400Regular } from '@expo-google-fonts/dm-serif-display'
 
@@ -9,7 +9,7 @@ export default function App() {
     DMSerifDisplay_400Regular
   })
 
-  if (!fontsIsLoaded) return <AppLoading />
+  if (fontsIsLoaded) return <Loading />
 
   return (
     <View>
