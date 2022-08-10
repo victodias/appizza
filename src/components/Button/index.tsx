@@ -1,5 +1,9 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Container, Load, Title, TypeProps } from './styles'
-import { RectButtonProps } from 'react-native-gesture-handler'
+import {
+  RectButtonProps,
+  GestureHandlerRootView
+} from 'react-native-gesture-handler'
 
 type Props = RectButtonProps & {
   title: string
@@ -14,10 +18,11 @@ export default function Button({
   ...rest
 }: Props) {
   return (
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    <Container type={type} enabled={!isLoading} {...rest}>
-      {isLoading ? <Load /> : <Title>{title}</Title>}
-    </Container>
+    <GestureHandlerRootView>
+      {/* @ts-ignore */}
+      <Container type={type} enabled={!isLoading} {...rest}>
+        {isLoading ? <Load /> : <Title>{title}</Title>}
+      </Container>
+    </GestureHandlerRootView>
   )
 }

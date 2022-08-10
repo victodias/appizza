@@ -11,14 +11,16 @@ export const Container = styled(LinearGradient).attrs(({ theme }) => ({
   flex: 1;
   justify-content: center;
 `
-export const Content = styled.ScrollView.attrs(() => <ScrollViewProps>({
-  showsVerticalScrollIndicator: false,
-  contentContainerStyle: {
-    paddingBottom: getBottomSpace() + 48
-  }
-}))`
+export const Content = styled.ScrollView.attrs(
+  () =>
+    <ScrollViewProps>{
+      showsVerticalScrollIndicator: false,
+      contentContainerStyle: {
+        paddingBottom: getBottomSpace() + 48
+      },
+    }
+)`
   padding: 0 32px;
-  width: 100%;
 `
 export const Title = styled.Text`
   align-self: flex-start;
@@ -30,9 +32,12 @@ export const Title = styled.Text`
     font-family: ${theme.FONTS.TITLE};
   `}
 `
-export const Brand = styled.Image.attrs(() => <ImageProps>({
-  resizeMode: 'contain'
-}))`
+export const Brand = styled.Image.attrs(
+  () =>
+    <ImageProps>{
+      resizeMode: 'contain'
+    }
+)`
   height: 340px;
   margin-top: 64px;
   margin-bottom: 32px;
